@@ -8,7 +8,7 @@
   <meta name="description" content="stuff">
   <meta name="keywords" content="stuff">
   <link rel="icon" href="favicon.png" type="icon/png" />
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/styles.min.css"/>
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -22,21 +22,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <a href="#" title="Olympiad">
-            <img src="/images/branding.png" title="Olympiad"/>
+          <a href="#" title="Olympiad" class="branding-desktop">
+            <img src="./images/logo_small.png" title="Olympiad"/>
           </a>
           <nav>
             <ul>
-              <li><a href="#" title="#">title</a></li>
-              <li><a href="#" title="#">title</a></li>
-              <li><a href="#" title="#">title</a></li>
+              <li><a href="#" title="#" class="active">Home</a></li>
+              <li><a href="#" title="#">Events</a></li>
+              <li><a href="#" title="#">News</a></li>
+              <li><a href="#" title="#">About</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-md-3">
           <div class="wrap-login">
-            <a href="#" title="Login">Login</a>
-            <a href="#" title="Login">Login</a>
+            <a href="#" title="Login" class="wrap-login--login">Login</a>
+            <a href="#" title="Sign Up" class="wrap-login--signup">Sign Up</a>
           </div>
         </div>
       </div>
@@ -51,11 +52,13 @@
 <main>
 
   <section class="banner-home">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>The Olympiad</h1>
-          <h2>The trading arena awaits...be one of the champions</h2>
+    <div class="banner-gladiators">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1><img src="./images/logo_large.png" title="The Olympiad"/><span class="hide">The Olympiad</span></h1>
+            <small>The trading arena awaits...be one of the champions</small>
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +69,7 @@
       <div class="row">
         <article class="events-block--wrap">
           <div class="col-md-8">
-            <h2 class="header-arrow">Upcoming Events</h2>
+            <h2 class="header-arrow">On Going Events</h2>
             <div class="row">
               <div class="col-md-6">
                 <div class="event-block">
@@ -92,7 +95,7 @@
         </article>
         <aside class="aside-home">
           <div class="col-md-4">
-            <h2 class="header-arrow">Upcoming Events</h2>
+            <h2 class="header-arrow">The Champions</h2>
             <div class="aside-champions--block">
               <div class="aside-champions--rank">
                1
@@ -166,18 +169,20 @@
     <div class="row">
       <div class="col-md-7">
         <strong>Stay Connected</strong>
-        <ul>
-          <li><a href="#" title="#" target="_blank">title</a></li>
-          <li><a href="#" title="#" target="_blank">title</a></li>
-          <li><a href="#" title="#" target="_blank">title</a></li>
+        <ul class="menu-social">
+          <li><a href="#" title="Facebook" target="_blank">Facebook</a></li>
+          <li><a href="#" title="Instagram" target="_blank">Instagram</a></li>
+          <li><a href="#" title="Youtube" target="_blank">Youtube</a></li>
         </ul>
       </div>
       <div class="col-md-5">
-        <ul>
-          <li><a href="#" title="#" target="_blank">title</a></li>
-          <li><a href="#" title="#" target="_blank">title</a></li>
-          <li><a href="#" title="#" target="_blank">title</a></li>
-        </ul>
+        <div class="clearfix">
+          <ul class="menu-footer">
+            <li><a href="#" title="About">About</a></li>
+            <li><a href="#" title="Privacy">Privacy</a></li>
+            <li><a href="#" title="Terms">Terms</a></li>
+          </ul>
+        </div>
         <small>Copyright 2017 The Olympiads. All Rights Reserved</small>
       </div>
     </div>
@@ -186,6 +191,6 @@
 <!-- end footer -->
 
 <script src="./js/plugins.js"></script>
-<script src="./js/scripts.js"></script>
+<script src="./js/scripts.min.js"></script>
 </body>
 </html>
