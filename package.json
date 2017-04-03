@@ -1,0 +1,29 @@
+{
+  "name": "hercules",
+  "version": "1.0.0",
+  "description": "olympiad",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnybravo916/hercules.git"
+  },
+  "keywords": [
+    "olympiad"
+  ],
+  "author": "Johnny Bravo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnybravo916/hercules/issues"
+  },
+  "homepage": "https://github.com/johnnybravo916/hercules#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.2.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

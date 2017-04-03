@@ -1,0 +1,39 @@
+@import "bootstrap.min.css";
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+
+
+/*******GLOBAL*******/
+html{background:#464646}
+body{background:#fff;font:400 $fontdefault $fontLato;color:$white}
+
+video, img, iframe{max-width:100%}
+
+/*******HEADER*******/
+/*******HEADER*******/
+
+
+
+
+
+
+/*******RESPONSIVE*******/
+@media only screen and (max-width : 1200px) {
+
+}
+@media only screen and (max-width : 992px) {
+
+}
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 640px){
+
+}
+@media only screen and (max-width : 480px) {
+ 
+}

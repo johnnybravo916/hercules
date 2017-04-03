@@ -1,0 +1,17 @@
+@import url(bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/*******GLOBAL*******/
+html {
+  background: #464646; }
+
+body {
+  background: #fff;
+  font: 400 14px "Lato", sans-serif;
+  color: #fffff; }
+
+video, img, iframe {
+  max-width: 100%; }
+
+/*******HEADER*******/
+/*******HEADER*******/
+/*******RESPONSIVE*******/
