@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import "flexslider.css";
 @import "_partials/mixins";
 @import "_partials/variables";
 @import "_partials/typography";
@@ -8,16 +9,34 @@
 html{background:$dark}
 body{background:$darkbg;font:400 $fontdefault $fontLato;color:$white}
 h1,h2,h3,h4,h5{margin:0}
+h1{font-size:$fontXXL} 
+h2{font-size:$fontXL}
+h3{font-size:$fontL}
+h4{font-size:$fontMedium}
+
 video, img, iframe{max-width:100%}
 a{
-  cursor:pointer;
+  cursor:pointer;@include transition(all ease-in-out 500ms); 
   &:hover{text-decoration:none}
 }
+.animate{@include transition(all ease-in-out 500ms)}
 /*******USEFUL STUFF*******/
+.padding-100{padding:100px 0}
+.padding-200{padding:200px 0}
+
 .header-arrow{
   font-size:$fontL;font-weight:$weightBlack;text-transform:uppercase;position:relative;padding:0 40px;display:inline-block;margin-bottom:30px;
   &:before{content:'';width:30px;height:30px;position:absolute;left:0;top:2px;background:url(../images/title_arrow_left.png) no-repeat}
   &:after{content:'';width:30px;height:30px;position:absolute;right:0;top:2px;background:url(../images/title_arrow_right.png) no-repeat}
+}
+
+.button{
+  padding:15px 25px;text-transform:uppercase;letter-spacing:1px;
+  &:hover{color:$white;}
+}
+.button-default{
+  border:1px solid $yellow;background:$byellow;color:$white;cursor:pointer;
+  &:hover{background:rgba($yellow,0);border-color:$white}
 }
 
 .link-arrow{
@@ -26,9 +45,13 @@ a{
   &:hover{color:$white}
   &:hover:after{content:'';background:url(../images/link_arrow_hover.png) right top no-repeat;height:25px;width:25px;display:inline-block;top:5px;right:0;position:absolute}
 }
+.link-arrow.link-center{
+  display:table;text-align:center;margin:0 auto;
+}
 
 .event-block{
-  margin-bottom:30px;
+  margin-bottom:30px;display:block;color:$white;
+  &:hover{color:$white}
   .event-img{
     height:200px;position:relative;overflow:hidden;
     img{width:100%}
@@ -44,8 +67,46 @@ a{
       span{margin-right:20px}
     }
   }
+  &:hover .event-data{background:$maroon;@include transition(all ease-in-out 500ms);}
 }
-
+.upcoming-block{
+  margin-bottom:30px;display:block;color:$white;cursor:pointer;
+  &:hover{color:$white}
+  .upcoming-img{
+    height:150px;position:relative;overflow:hidden;
+    img{width:100%}
+    .upcoming-date{
+      position:absolute;padding:10px;background:$maroon;color:$white;text-transform:uppercase;font-size:$fontSmall;right:10px;top:0;
+      .upcoming-date--month{text-transform:uppercase;display:block}  
+      .upcoming-date--date{font-size:$fontMedium + 4;display:block}
+    }
+    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:5px}
+  }
+  .upcoming-data{
+    background:$darklight;border:1px solid $darkborder;padding:15px;
+    h3{font-size:$fontdefault;text-transform:uppercase;font-weight:$weightBold;margin-bottom:10px}
+    strong{font-size:$fontSmall;font-weight:$weightRegular;opacity:$opacityhalf;}
+    .upcoming-data--footer{
+      margin-top:5px;opacity:$opacityhalf;font-size:$fontSmall;
+      span{margin-right:20px}
+    }
+  }
+  &:hover .upcoming-data{background:$maroon;@include transition(all ease-in-out 500ms);}
+}
+.aside-champions--block{
+  background:$darklight;border:1px solid $darkborder;height:70px;margin-bottom:10px;
+  .aside-champions--rank{font-size:$fontXL + 2;font-weight:$weightLight;float:left;padding:0 15px;line-height:70px;opacity:$opacityhalf}
+  .aside-champions--image{width:70px;height:70px;overflow:hidden;float:left}
+  .aside-champions--data{
+    float:left;padding:0 15px;
+    .aside-champions--center{display:flex;justify-content:center;flex-direction:column;height:70px}
+    .aside-champions--name{color:$yellow;text-transform:uppercase;margin-bottom:5px;display:block}
+    .aside-champions--gold{color:$yellow;text-transform:uppercase;opacity:$opacityhalf}
+  }
+}
+.aside-champions--block:first-of-type{border-left:2px solid $gold}
+.aside-champions--block:nth-of-type(2){border-left:2px solid $silver}
+.aside-champions--block:nth-of-type(3){border-left:2px solid $bronze}
 /*******HEADER*******/
 header.header-desktop{
   position:fixed;top:0;left:0;width:100%;height:100px;padding-top:20px;padding-bottom:20px;z-index:10;
@@ -63,20 +124,46 @@ header.header-desktop{
   float:right;
   a{display:inline-block;padding:10px 15px;margin-left:5px;color:$white;text-transform:uppercase;border:1px solid $white}
   .wrap-login--login{}
-  .wrap-login--signup{background:rgba($bronze,$opacityhalf);border:1px solid $yellow}
+  .wrap-login--signup{background:rgba($byellow,$opacityhalf);border:1px solid $yellow}
 }
 /*******HOME*******/
 .banner-home{
   background:url(../images/bg-red.jpg);text-align:center;text-transform:uppercase;
 }
-.banner-gladiators{background:url(../images/gladiators-banner.png) center 100px no-repeat fixed;padding:225px 0;}
+.banner-gladiators{background:url(../images/gladiators-banner.png) center 100px no-repeat fixed;}
 
 .events-home{
   position:relative;background:$darkbg;
   &:before{content:'';position:absolute;top:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black.png);background-size:cover}
-  &:after{content:'';position:absolute;bottom:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black-2.png);background-size:cover}
+  &:after{content:'';position:absolute;bottom:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black-2.png);background-size:cover;z-index:4}
+}
+.signup-home{
+  background:url(../images/mid_homepage.jpg) top center no-repeat fixed;background-size:cover;position:relative;text-align:center;
+  &:before{content:'';position:absolute;top:-85px;left:0;width:540px;height:100%;background:url(../images/gladiator_midpage.png) left top no-repeat;z-index:5;}
+  h2,p{margin-bottom:50px}
+}
+.upcoming-home{
+  position:relative;
+  &:before{content:'';position:absolute;top:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black.png);background-size:cover}
 }
 
+.slider-carousel{margin:20px 50px 30px;}
+.flex-direction-nav{
+  font-size:0;line-height:0;
+  a{
+    width:40px;height:60px;font-size:0;display:block;top:40%;
+    &:hover{opacity:0.7}
+    &:before{display:none}
+  }
+  a.flex-prev{
+    background:url(../images/carousel_left.png);left:-50px;opacity:1;
+  }
+  a.flex-next{
+    background:url(../images/carousel_right.png);right:-50px;opacity:1;
+  }
+  a.flex-next.flex-disabled{background:url(../images/carousel_right_inactive.png);pointer-events: none;right:-50px;opacity:1;}
+  a.flex-prev.flex-disabled{background:url(../images/carousel_left_inactive.png);pointer-events: none;left:-50px;opacity:1;}
+}
 /*******FOOTER*******/
 footer.footer-main{
   background:$dark;border:1px solid $darkborder;border-width:1px 0;padding:20px 0;
@@ -109,6 +196,8 @@ footer.footer-main{
     } 
   }
 }
+/*******FLEXSLIDER**************/
+.flexslider{margin:0 0 0 0;background:none;border:none;border-radius:0;box-shadow:none}  
 /*******RESPONSIVE*******/
 @media only screen and (max-width : 1200px) {
 
