@@ -1,4 +1,4 @@
-# hercules
+# Hercules
 <h1>Olympiad UI</h1>
 <strong>Setup Instructions</strong>
 <ul>

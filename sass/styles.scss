@@ -7,7 +7,7 @@
 /*******GLOBAL*******/
 html{background:$dark}
 body{background:$darkbg;font:400 $fontdefault $fontLato;color:$white}
-
+h1,h2,h3,h4,h5{margin:0}
 video, img, iframe{max-width:100%}
 a{
   cursor:pointer;
@@ -15,11 +15,36 @@ a{
 }
 /*******USEFUL STUFF*******/
 .header-arrow{
-  font-size:$fontL;font-weight:$weightBlack;text-transform:uppercase;position:relative;padding:0 40px;display:inline-block;margin-bottom:25px;
+  font-size:$fontL;font-weight:$weightBlack;text-transform:uppercase;position:relative;padding:0 40px;display:inline-block;margin-bottom:30px;
   &:before{content:'';width:30px;height:30px;position:absolute;left:0;top:2px;background:url(../images/title_arrow_left.png) no-repeat}
   &:after{content:'';width:30px;height:30px;position:absolute;right:0;top:2px;background:url(../images/title_arrow_right.png) no-repeat}
 }
 
+.link-arrow{
+  color:$yellow;text-transform:uppercase;font-size:$fontSmall;position:relative;padding:10px 35px 10px 0;display:inline-block;@include transition(all ease-in-out 500ms);
+  &:after{content:'';background:url(../images/link_arrow.png) right top no-repeat;height:25px;width:25px;display:inline-block;top:5px;right:0;position:absolute;@include transition(all ease-in-out 500ms)}
+  &:hover{color:$white}
+  &:hover:after{content:'';background:url(../images/link_arrow_hover.png) right top no-repeat;height:25px;width:25px;display:inline-block;top:5px;right:0;position:absolute}
+}
+
+.event-block{
+  margin-bottom:30px;
+  .event-img{
+    height:200px;position:relative;overflow:hidden;
+    img{width:100%}
+    .event-tag{position:absolute;padding:10px;background:$maroon;color:$white;text-transform:uppercase;font-size:$fontSmall;right:15px;top:15px}
+    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:5px}
+  }
+  .event-data{
+    background:$darklight;border:1px solid $darkborder;padding:15px;
+    h3{float:left;display:inline;font-size:$fontdefault;text-transform:uppercase;font-weight:$weightBold}
+    strong{float:right;font-size:$fontSmall;font-weight:$weightRegular}
+    .event-data--footer{
+      margin-top:5px;opacity:$opacityhalf;font-size:$fontSmall;
+      span{margin-right:20px}
+    }
+  }
+}
 
 /*******HEADER*******/
 header.header-desktop{
@@ -38,7 +63,7 @@ header.header-desktop{
   float:right;
   a{display:inline-block;padding:10px 15px;margin-left:5px;color:$white;text-transform:uppercase;border:1px solid $white}
   .wrap-login--login{}
-  .wrap-login--signup{background:rgba($bronze,0.7);border:1px solid $yellow}
+  .wrap-login--signup{background:rgba($bronze,$opacityhalf);border:1px solid $yellow}
 }
 /*******HOME*******/
 .banner-home{
@@ -59,11 +84,11 @@ footer.footer-main{
   ul{margin:0;padding:0}
   li{list-style-type:none;display:inline}
   a{color:$white;display:inline-block;text-transform:uppercase;}
-  small{color:rgba($white,0.4);display:block;text-align:right}
+  small{color:rgba($white,$opacityhalf);display:block;text-align:right}
   .menu-footer{
     text-align:right;margin-bottom:5px;
     a{
-      &:after{content:'|';color:rgba($white,0.5);padding:0 10px;font-size:$fontSmall;vertical-align:middle;}
+      &:after{content:'|';color:rgba($white,$opacityhalf);padding:0 10px;font-size:$fontSmall;vertical-align:middle;}
     }
     li:last-child a:after{content:'';display:none}
   }

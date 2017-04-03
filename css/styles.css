@@ -9,6 +9,9 @@ body {
   font: 400 14px "Lato", sans-serif;
   color: #ffffff; }
 
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
 video, img, iframe {
   max-width: 100%; }
 
@@ -25,7 +28,7 @@ a {
   position: relative;
   padding: 0 40px;
   display: inline-block;
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
   .header-arrow:before {
     content: '';
     width: 30px;
@@ -42,6 +45,90 @@ a {
     right: 0;
     top: 2px;
     background: url(../images/title_arrow_right.png) no-repeat; }
+
+.link-arrow {
+  color: #f8a325;
+  text-transform: uppercase;
+  font-size: 13px;
+  position: relative;
+  padding: 10px 35px 10px 0;
+  display: inline-block;
+  -webkit-transition: all ease-in-out 500ms;
+  -moz-transition: all ease-in-out 500ms;
+  -ms-transition: all ease-in-out 500ms;
+  -o-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms; }
+  .link-arrow:after {
+    content: '';
+    background: url(../images/link_arrow.png) right top no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    top: 5px;
+    right: 0;
+    position: absolute;
+    -webkit-transition: all ease-in-out 500ms;
+    -moz-transition: all ease-in-out 500ms;
+    -ms-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
+    transition: all ease-in-out 500ms; }
+  .link-arrow:hover {
+    color: #ffffff; }
+  .link-arrow:hover:after {
+    content: '';
+    background: url(../images/link_arrow_hover.png) right top no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    top: 5px;
+    right: 0;
+    position: absolute; }
+
+.event-block {
+  margin-bottom: 30px; }
+  .event-block .event-img {
+    height: 200px;
+    position: relative;
+    overflow: hidden; }
+    .event-block .event-img img {
+      width: 100%; }
+    .event-block .event-img .event-tag {
+      position: absolute;
+      padding: 10px;
+      background: #7f1d1a;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 13px;
+      right: 15px;
+      top: 15px; }
+    .event-block .event-img:after {
+      content: '';
+      position: absolute;
+      background: url(../images/gold_trim.png) top center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px; }
+  .event-block .event-data {
+    background: #1d1d1d;
+    border: 1px solid #2d2d2d;
+    padding: 15px; }
+    .event-block .event-data h3 {
+      float: left;
+      display: inline;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700; }
+    .event-block .event-data strong {
+      float: right;
+      font-size: 13px;
+      font-weight: 400; }
+    .event-block .event-data .event-data--footer {
+      margin-top: 5px;
+      opacity: 0.5;
+      font-size: 13px; }
+      .event-block .event-data .event-data--footer span {
+        margin-right: 20px; }
 
 /*******HEADER*******/
 header.header-desktop {
@@ -86,7 +173,7 @@ header.header-desktop {
     text-transform: uppercase;
     border: 1px solid #ffffff; }
   .wrap-login .wrap-login--signup {
-    background: rgba(165, 72, 28, 0.7);
+    background: rgba(165, 72, 28, 0.5);
     border: 1px solid #f8a325; }
 
 /*******HOME*******/
@@ -144,7 +231,7 @@ footer.footer-main {
     display: inline-block;
     text-transform: uppercase; }
   footer.footer-main small {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
     display: block;
     text-align: right; }
   footer.footer-main .menu-footer {
