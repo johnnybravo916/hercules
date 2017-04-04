@@ -3,8 +3,6 @@
 @import "_partials/mixins";
 @import "_partials/variables";
 @import "_partials/typography";
-
-
 /*******GLOBAL*******/
 html{background:$dark}
 body{background:$darkbg;font:400 $fontdefault $fontLato;color:$white}
@@ -21,8 +19,14 @@ a{
 }
 .animate{@include transition(all ease-in-out 500ms)}
 /*******USEFUL STUFF*******/
+.margin-b-20{margin-bottom:20px}
+.margin-b-30{margin-bottom:30px}
+.margin-b-40{margin-bottom:40px}
+.margin-b-50{margin-bottom:50px}
+
 .padding-50{padding:50px 0}
 .padding-100{padding:100px 0}
+.padding-150{padding:150px 0}
 .padding-200{padding:200px 0}
 
 .breadcrumbs{
@@ -30,9 +34,8 @@ a{
   ul{margin:0;padding:15px 0}
   li{list-style-type:none;display:inline}
   a{color:rgba($white,0.2);display:inline-block;margin-right:30px}
-  .active{color:rgba($white,1)}
+  .active{color:rgba($white,1)}   
 }
-
 .pagination{
   font-size:$fontSmall;display:flex;align-items:center;justify-content:center;
   div{
@@ -47,20 +50,26 @@ a{
     &:hover{background:rgba($darkborder,1);color:rgba($white,1)}
   }
 }
-
 .header-arrow{
   font-size:$fontL;font-weight:$weightBlack;text-transform:uppercase;position:relative;padding:0 40px;display:inline-block;margin-bottom:30px;
   &:before{content:'';width:30px;height:30px;position:absolute;left:0;top:2px;background:url(../images/title_arrow_left.png) no-repeat}
   &:after{content:'';width:30px;height:30px;position:absolute;right:0;top:2px;background:url(../images/title_arrow_right.png) no-repeat}
 }
-
+.button-full{color:$white;font-size:$fontdefault + 2;text-align:center;padding:15px 0;width:100%;display:block;margin-bottom:15px}
 .button{
-  padding:15px 25px;text-transform:uppercase;letter-spacing:1px;
+  padding:15px 25px;text-transform:uppercase;letter-spacing:1px;cursor:pointer;@include transition(all ease-in-out 500ms);
   &:hover{color:$white;}
 }
 .button-default{
   border:1px solid $yellow;background:$byellow;color:$white;cursor:pointer;
   &:hover{background:rgba($yellow,0);border-color:$white}
+}
+.button-clear{
+  border:1px solid $white;background:transparent;
+  &:hover{border:1px solid $yellow;background:$byellow;color:$white;}
+}
+.button-facebook{
+  width:100%;color:$white;font-size:$fontdefault + 2;text-align:center;padding:15px 0;background:#3b5998;display:block;
 }
 
 .link-arrow{
@@ -72,7 +81,10 @@ a{
 .link-arrow.link-center{
   display:table;text-align:center;margin:0 auto;
 }
-
+a.link-orange{
+  color:$yellow;
+  &:hover{color:$bronze}
+}
 .event-block{
   margin-bottom:30px;display:block;color:$white;
   &:hover{color:$white}
@@ -150,12 +162,12 @@ header.header-desktop{
   .wrap-login--login{}
   .wrap-login--signup{background:rgba($byellow,$opacityhalf);border:1px solid $yellow}
 }
+
 /*******HOME*******/
 .banner-home{
   background:url(../images/bg-red.jpg);text-align:center;text-transform:uppercase;
 }
 .banner-gladiators{background:url(../images/gladiators-banner.png) center 100px no-repeat fixed;}
-
 .events-home{
   position:relative;background:$darkbg;
   &:before{content:'';position:absolute;top:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black.png);background-size:cover}
@@ -170,7 +182,6 @@ header.header-desktop{
   position:relative;
   &:before{content:'';position:absolute;top:-85px;left:0;width:100%;height:85px;background:url(../images/slant-black.png);background-size:cover}
 }
-
 .slider-carousel{margin:20px 50px 30px;}
 .flex-direction-nav{
   font-size:0;line-height:0;
@@ -188,6 +199,29 @@ header.header-desktop{
   a.flex-next.flex-disabled{background:url(../images/carousel_right_inactive.png);pointer-events: none;right:-50px;opacity:1;}
   a.flex-prev.flex-disabled{background:url(../images/carousel_left_inactive.png);pointer-events: none;left:-50px;opacity:1;}
 }
+/*******LOGIN SIGNUP*******/
+.bg-form{
+  background:url(../images/login_register_bg.jpg) center center fixed;background-size:cover;
+  h1{margin-bottom:30px;}
+  .bg-form--or{
+    font-size:$fontSmall;color:rgba($white,0.4);text-align:center;text-transform:uppercase;padding:20px 0;position:relative;
+    &:before{content:'';width:42%;background:rgba($white,0.4);height:1px;position:absolute;top:27px;left:0}
+    &:after{content:'';width:42%;background:rgba($white,0.4);height:1px;position:absolute;top:27px;right:0}
+  }
+  form{
+    input[type='text'],input[type='password'],input[type='email'],select{background:$dark;border:1px solid $darkborder;padding:10px;display:inline}
+    input{width:100%;margin-bottom:10px}
+    .form-two{display:flex;justify-content:space-between;align-items:center;}
+    .form-two input{width:49%}
+    .form-three{display:flex;color:rgba($white,0.4);justify-content:space-between;align-items:center;}
+    .form-three select{width:32%;}
+    ::-webkit-input-placeholder {color:rgba($white,0.4);}
+    ::-moz-placeholder {color:rgba($white,0.4);}
+    :-ms-input-placeholder {color:rgba($white,0.4);}
+    :-moz-placeholder {color:rgba($white,0.4);}
+  }
+  small{display:block}
+}
 /*******EVENTS*******/
 .banner-page{
   padding:100px 0 50px;background:url(../images/events_banner.jpg) center center fixed;background-size:cover;
@@ -195,7 +229,7 @@ header.header-desktop{
 }
 
 /*******FOOTER*******/
-footer.footer-main{
+footer.footer-main, footer.footer-form{
   background:$dark;border:1px solid $darkborder;border-width:1px 0;padding:20px 0;
   strong{font-size:$fontMedium + 2;font-weight:$weightBlack;text-transform:uppercase;display:inline-block;margin-top:7px;}
   ul{margin:0;padding:0}
@@ -226,8 +260,12 @@ footer.footer-main{
     } 
   }
 }
+footer.footer-form{background:transparent}
 /*******FLEXSLIDER**************/
 .flexslider{margin:0 0 0 0;background:none;border:none;border-radius:0;box-shadow:none}  
+   
+/*******OVERRIDE*******/
+.margin-remove{margin:0 0 0 0}
 /*******RESPONSIVE*******/
 @media only screen and (max-width : 1200px) {
 

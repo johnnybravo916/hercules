@@ -48,5 +48,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
   
+	grunt.registerTask('cssmin',['cssmin']);
+	grunt.registerTask('sass',['sass']);
 	grunt.registerTask('magic',['watch']);
 }

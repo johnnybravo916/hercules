@@ -1,6 +1,11 @@
 //CUSTOM FUNCTIONS
-//FLEXSLIDER
-if ( $( ".slider-carousel" ).length > 0 ) { 
+//HEIGHT
+if ($( ".jsHeight" ).length > 0) { 
+  var fullHeight = $(window).height();
+  $('.jsHeight').css("min-height",fullHeight);  
+}     
+//FLEXSLIDER 
+if ($( ".slider-carousel" ).length > 0) { 
   $('.slider-carousel .flexslider').flexslider({
     animation: 'slide',
     slideshow: false,

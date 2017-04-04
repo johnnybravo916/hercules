@@ -46,6 +46,18 @@ a {
   transition: all ease-in-out 500ms; }
 
 /*******USEFUL STUFF*******/
+.margin-b-20 {
+  margin-bottom: 20px; }
+
+.margin-b-30 {
+  margin-bottom: 30px; }
+
+.margin-b-40 {
+  margin-bottom: 40px; }
+
+.margin-b-50 {
+  margin-bottom: 50px; }
+
 .padding-50 {
   padding: 50px 0; }
 
@@ -121,10 +133,25 @@ a {
     top: 2px;
     background: url(../images/title_arrow_right.png) no-repeat; }
 
+.button-full {
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px; }
+
 .button {
   padding: 15px 25px;
   text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 500ms;
+  -moz-transition: all ease-in-out 500ms;
+  -ms-transition: all ease-in-out 500ms;
+  -o-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms; }
   .button:hover {
     color: #ffffff; }
 
@@ -136,6 +163,23 @@ a {
   .button-default:hover {
     background: rgba(248, 163, 37, 0);
     border-color: #ffffff; }
+
+.button-clear {
+  border: 1px solid #ffffff;
+  background: transparent; }
+  .button-clear:hover {
+    border: 1px solid #f8a325;
+    background: #a5481c;
+    color: #ffffff; }
+
+.button-facebook {
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0;
+  background: #3b5998;
+  display: block; }
 
 .link-arrow {
   color: #f8a325;
@@ -179,6 +223,11 @@ a {
   display: table;
   text-align: center;
   margin: 0 auto; }
+
+a.link-orange {
+  color: #f8a325; }
+  a.link-orange:hover {
+    color: #ae7658; }
 
 .event-block {
   margin-bottom: 30px;
@@ -482,6 +531,67 @@ header.header-desktop {
     left: -50px;
     opacity: 1; }
 
+/*******LOGIN SIGNUP*******/
+.bg-form {
+  background: url(../images/login_register_bg.jpg) center center fixed;
+  background-size: cover; }
+  .bg-form h1 {
+    margin-bottom: 30px; }
+  .bg-form .bg-form--or {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+    position: relative; }
+    .bg-form .bg-form--or:before {
+      content: '';
+      width: 42%;
+      background: rgba(255, 255, 255, 0.4);
+      height: 1px;
+      position: absolute;
+      top: 27px;
+      left: 0; }
+    .bg-form .bg-form--or:after {
+      content: '';
+      width: 42%;
+      background: rgba(255, 255, 255, 0.4);
+      height: 1px;
+      position: absolute;
+      top: 27px;
+      right: 0; }
+  .bg-form form input[type='text'], .bg-form form input[type='password'], .bg-form form input[type='email'], .bg-form form select {
+    background: #080808;
+    border: 1px solid #2d2d2d;
+    padding: 10px;
+    display: inline; }
+  .bg-form form input {
+    width: 100%;
+    margin-bottom: 10px; }
+  .bg-form form .form-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .bg-form form .form-two input {
+    width: 49%; }
+  .bg-form form .form-three {
+    display: flex;
+    color: rgba(255, 255, 255, 0.4);
+    justify-content: space-between;
+    align-items: center; }
+  .bg-form form .form-three select {
+    width: 32%; }
+  .bg-form form ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4); }
+  .bg-form form ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4); }
+  .bg-form form :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4); }
+  .bg-form form :-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4); }
+  .bg-form small {
+    display: block; }
+
 /*******EVENTS*******/
 .banner-page {
   padding: 100px 0 50px;
@@ -492,53 +602,53 @@ header.header-desktop {
     font-weight: 900; }
 
 /*******FOOTER*******/
-footer.footer-main {
+footer.footer-main, footer.footer-form {
   background: #080808;
   border: 1px solid #2d2d2d;
   border-width: 1px 0;
   padding: 20px 0; }
-  footer.footer-main strong {
+  footer.footer-main strong, footer.footer-form strong {
     font-size: 22px;
     font-weight: 900;
     text-transform: uppercase;
     display: inline-block;
     margin-top: 7px; }
-  footer.footer-main ul {
+  footer.footer-main ul, footer.footer-form ul {
     margin: 0;
     padding: 0; }
-  footer.footer-main li {
+  footer.footer-main li, footer.footer-form li {
     list-style-type: none;
     display: inline; }
-  footer.footer-main a {
+  footer.footer-main a, footer.footer-form a {
     color: #ffffff;
     display: inline-block;
     text-transform: uppercase; }
-  footer.footer-main small {
+  footer.footer-main small, footer.footer-form small {
     color: rgba(255, 255, 255, 0.5);
     display: block;
     text-align: right; }
-  footer.footer-main .menu-footer {
+  footer.footer-main .menu-footer, footer.footer-form .menu-footer {
     text-align: right;
     margin-bottom: 5px; }
-    footer.footer-main .menu-footer a:after {
+    footer.footer-main .menu-footer a:after, footer.footer-form .menu-footer a:after {
       content: '|';
       color: rgba(255, 255, 255, 0.5);
       padding: 0 10px;
       font-size: 13px;
       vertical-align: middle; }
-    footer.footer-main .menu-footer li:last-child a:after {
+    footer.footer-main .menu-footer li:last-child a:after, footer.footer-form .menu-footer li:last-child a:after {
       content: '';
       display: none; }
-  footer.footer-main .menu-social {
+  footer.footer-main .menu-social, footer.footer-form .menu-social {
     display: inline;
     margin-left: 20px; }
-    footer.footer-main .menu-social li a {
+    footer.footer-main .menu-social li a, footer.footer-form .menu-social li a {
       -webkit-transition: all ease-in-out 500ms;
       -moz-transition: all ease-in-out 500ms;
       -ms-transition: all ease-in-out 500ms;
       -o-transition: all ease-in-out 500ms;
       transition: all ease-in-out 500ms; }
-    footer.footer-main .menu-social li:first-child a {
+    footer.footer-main .menu-social li:first-child a, footer.footer-form .menu-social li:first-child a {
       background: url(../images/fb_normal.png) center center no-repeat;
       width: 45px;
       height: 45px;
@@ -546,9 +656,9 @@ footer.footer-main {
       line-height: 0;
       vertical-align: top;
       margin: 0 5px; }
-      footer.footer-main .menu-social li:first-child a:hover {
+      footer.footer-main .menu-social li:first-child a:hover, footer.footer-form .menu-social li:first-child a:hover {
         background-image: url(../images/fb_hover.png); }
-    footer.footer-main .menu-social li:nth-child(2) a {
+    footer.footer-main .menu-social li:nth-child(2) a, footer.footer-form .menu-social li:nth-child(2) a {
       background: url(../images/ig_normal.png) center center no-repeat;
       width: 45px;
       height: 45px;
@@ -556,9 +666,9 @@ footer.footer-main {
       line-height: 0;
       vertical-align: top;
       margin: 0 5px; }
-      footer.footer-main .menu-social li:nth-child(2) a:hover {
+      footer.footer-main .menu-social li:nth-child(2) a:hover, footer.footer-form .menu-social li:nth-child(2) a:hover {
         background-image: url(../images/ig_hover.png); }
-    footer.footer-main .menu-social li:nth-child(3) a {
+    footer.footer-main .menu-social li:nth-child(3) a, footer.footer-form .menu-social li:nth-child(3) a {
       background: url(../images/yt_normal.png) center center no-repeat;
       width: 45px;
       height: 45px;
@@ -566,8 +676,11 @@ footer.footer-main {
       line-height: 0;
       vertical-align: top;
       margin: 0 5px; }
-      footer.footer-main .menu-social li:nth-child(3) a:hover {
+      footer.footer-main .menu-social li:nth-child(3) a:hover, footer.footer-form .menu-social li:nth-child(3) a:hover {
         background-image: url(../images/yt_hover.png); }
+
+footer.footer-form {
+  background: transparent; }
 
 /*******FLEXSLIDER**************/
 .flexslider {
@@ -576,5 +689,9 @@ footer.footer-main {
   border: none;
   border-radius: 0;
   box-shadow: none; }
+
+/*******OVERRIDE*******/
+.margin-null {
+  margin: 0 0 0 0; }
 
 /*******RESPONSIVE*******/
