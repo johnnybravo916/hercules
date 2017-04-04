@@ -21,8 +21,32 @@ a{
 }
 .animate{@include transition(all ease-in-out 500ms)}
 /*******USEFUL STUFF*******/
+.padding-50{padding:50px 0}
 .padding-100{padding:100px 0}
 .padding-200{padding:200px 0}
+
+.breadcrumbs{
+  font-size:$fontSmall;text-transform:uppercase;background:#541613;
+  ul{margin:0;padding:15px 0}
+  li{list-style-type:none;display:inline}
+  a{color:rgba($white,0.2);display:inline-block;margin-right:30px}
+  .active{color:rgba($white,1)}
+}
+
+.pagination{
+  font-size:$fontSmall;display:flex;align-items:center;justify-content:center;
+  div{
+    line-height:30px;text-align:center;float:left;border:1px solid $darkborder;width:30px;height:30px;cursor:pointer;
+    &:hover{background:rgba($darkborder,0.5);color:rgba($white,0.5)}
+  }
+  .pagination-inactive{
+    color:rgba($white,0.3);
+  }
+  .pagination-active{
+    background:$darkborder;
+    &:hover{background:rgba($darkborder,1);color:rgba($white,1)}
+  }
+}
 
 .header-arrow{
   font-size:$fontL;font-weight:$weightBlack;text-transform:uppercase;position:relative;padding:0 40px;display:inline-block;margin-bottom:30px;
@@ -53,10 +77,10 @@ a{
   margin-bottom:30px;display:block;color:$white;
   &:hover{color:$white}
   .event-img{
-    height:200px;position:relative;overflow:hidden;
+    position:relative;
     img{width:100%}
     .event-tag{position:absolute;padding:10px;background:$maroon;color:$white;text-transform:uppercase;font-size:$fontSmall;right:15px;top:15px}
-    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:5px}
+    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:1px}
   }
   .event-data{
     background:$darklight;border:1px solid $darkborder;padding:15px;
@@ -73,14 +97,14 @@ a{
   margin-bottom:30px;display:block;color:$white;cursor:pointer;
   &:hover{color:$white}
   .upcoming-img{
-    height:150px;position:relative;overflow:hidden;
+    position:relative;
     img{width:100%}
     .upcoming-date{
       position:absolute;padding:10px;background:$maroon;color:$white;text-transform:uppercase;font-size:$fontSmall;right:10px;top:0;
       .upcoming-date--month{text-transform:uppercase;display:block}  
       .upcoming-date--date{font-size:$fontMedium + 4;display:block}
     }
-    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:5px}
+    &:after{content:'';position:absolute;background:url(../images/gold_trim.png) top center;bottom:0;left:0;width:100%;height:1px}
   }
   .upcoming-data{
     background:$darklight;border:1px solid $darkborder;padding:15px;
@@ -164,6 +188,12 @@ header.header-desktop{
   a.flex-next.flex-disabled{background:url(../images/carousel_right_inactive.png);pointer-events: none;right:-50px;opacity:1;}
   a.flex-prev.flex-disabled{background:url(../images/carousel_left_inactive.png);pointer-events: none;left:-50px;opacity:1;}
 }
+/*******EVENTS*******/
+.banner-page{
+  padding:100px 0 50px;background:url(../images/events_banner.jpg) center center fixed;background-size:cover;
+  h1{text-transform:uppercase;font-weight:$weightBlack}
+}
+
 /*******FOOTER*******/
 footer.footer-main{
   background:$dark;border:1px solid $darkborder;border-width:1px 0;padding:20px 0;
