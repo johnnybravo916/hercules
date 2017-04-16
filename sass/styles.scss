@@ -18,6 +18,7 @@ a{
   &:hover{text-decoration:none}
 }
 .animate{@include transition(all ease-in-out 500ms)}
+.verticalAlign{display:flex;justify-content:center;flex-direction:column;}
 /*******USEFUL STUFF*******/
 .margin-b-20{margin-bottom:20px}
 .margin-b-30{margin-bottom:30px}
@@ -30,7 +31,7 @@ a{
 .padding-200{padding:200px 0}
 
 .breadcrumbs{
-  font-size:$fontSmall;text-transform:uppercase;background:#541613;
+  font-size:$fontSmall;text-transform:uppercase;background:#541613;padding-left:20px;padding-right:20px;
   ul{margin:0;padding:15px 0}
   li{list-style-type:none;display:inline}
   a{color:rgba($white,0.2);display:inline-block;margin-right:30px}
@@ -63,6 +64,12 @@ a{
 .button-default{
   border:1px solid $yellow;background:$byellow;color:$white;cursor:pointer;
   &:hover{background:rgba($yellow,0);border-color:$white}
+}
+.button-funds{
+  border:1px solid $yellow;background:$byellow;color:$white;cursor:pointer;max-width:200px;padding:10px 0;text-align:center;margin:15px auto 0;
+}
+.button-funds.button-insufficient{
+  background:#5f5f5f;color:rgba($white,0.5);border:1px solid rgba($white,0.5);;
 }
 .button-clear{
   border:1px solid $white;background:transparent;
@@ -145,9 +152,10 @@ a.link-orange{
 .aside-champions--block:nth-of-type(3){border-left:2px solid $bronze}
 /*******HEADER*******/
 header.header-desktop{
-  position:fixed;top:0;left:0;width:100%;height:100px;padding-top:20px;padding-bottom:20px;z-index:10;
+  position:fixed;top:0;left:0;width:100%;height:100px;padding-top:15px;padding-bottom:20px;z-index:10;background:$maroon;@include transition(all ease-in-out 500ms);
   .branding-desktop{float:left}
-  nav{height:100px;text-transform:uppercase;float:left;margin-left:20px}
+  .header-left{padding-top:10px}
+  nav{text-transform:uppercase;float:left;margin-left:20px}
   nav ul{margin:0;padding:0}
   nav ul li{list-style-type:none;display:inline}
   nav ul li a{
@@ -156,6 +164,7 @@ header.header-desktop{
   }
   nav ul li a.active{color:$white}
 }
+
 .wrap-login{
   float:right;
   a{display:inline-block;padding:10px 15px;margin-left:5px;color:$white;text-transform:uppercase;border:1px solid $white}
@@ -163,6 +172,28 @@ header.header-desktop{
   .wrap-login--signup{background:rgba($byellow,$opacityhalf);border:1px solid $yellow}
 }
 
+header.header-desktop .loggedIn{
+  padding-top:3px;float:right;
+  .loggedIn-profilePicture{display:inline-block;margin-right:10px;vertical-align:top}
+  .loggedIn-profilePicture img{max-width:70px;@include transition(all ease-in-out 500ms)}
+  .loggedIn-profileData{display:inline-block;}
+  .loggedIn-profileData strong{text-transform:uppercase;letter-spacing:2px;display:block;margin-top:15px;margin-bottom:10px}
+  .loggedIn-profileData--links{display:block}
+  .loggedIn-profileData a{
+    display:inline;color:$yellow;
+    &:hover{color:$white}
+  }
+}
+
+header.header-desktop.jsMinMenu{
+  height:70px;padding-top:15px;padding-bottom:10px;@include transition(all ease-in-out 500ms);
+  .header-left{padding-top:0}
+  .loggedIn{
+    padding-top:0;
+    .loggedIn-profilePicture img{max-width:45px;@include transition(all ease-in-out 500ms)}
+    .loggedIn-profileData strong{margin-top:5px;margin-bottom:5px;@include transition(all ease-in-out 500ms)}
+  }
+}
 /*******HOME*******/
 .banner-home{
   background:url(../images/bg-red.jpg);text-align:center;text-transform:uppercase;
@@ -223,8 +254,12 @@ header.header-desktop{
   small{display:block}
 }
 /*******EVENTS*******/
+.bg-page{
+  background:url(../images/mid_homepage.jpg) top center fixed;background-size:cover;
+}
+
 .banner-page{
-  padding:100px 0 50px;background:url(../images/events_banner.jpg) center center fixed;background-size:cover;
+  padding:200px 0 100px;
   h1{text-transform:uppercase;font-weight:$weightBlack}
 }
 
