@@ -50,6 +50,9 @@ a {
   justify-content: center;
   flex-direction: column; }
 
+.color-gray {
+  color: #8c8c8c; }
+
 /*******USEFUL STUFF*******/
 .margin-b-20 {
   margin-bottom: 20px; }
@@ -455,7 +458,13 @@ header.header-desktop {
     color: #ffffff; }
 
 .wrap-login {
-  float: right; }
+  float: right;
+  padding-top: 15px;
+  -webkit-transition: all ease-in-out 500ms;
+  -moz-transition: all ease-in-out 500ms;
+  -ms-transition: all ease-in-out 500ms;
+  -o-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms; }
   .wrap-login a {
     display: inline-block;
     padding: 10px 15px;
@@ -526,6 +535,14 @@ header.header-desktop.jsMinMenu {
       -o-transition: all ease-in-out 500ms;
       transition: all ease-in-out 500ms; }
 
+header.header-desktop.jsMinMenu .wrap-login {
+  padding-top: 0px;
+  -webkit-transition: all ease-in-out 500ms;
+  -moz-transition: all ease-in-out 500ms;
+  -ms-transition: all ease-in-out 500ms;
+  -o-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms; }
+
 /*******HOME*******/
 .banner-home {
   background: url(../images/bg-red.jpg);
@@ -557,6 +574,19 @@ header.header-desktop.jsMinMenu {
     background: url(../images/slant-black-2.png);
     background-size: cover;
     z-index: 4; }
+
+.bg-slantdark--top {
+  position: relative;
+  background: #121212; }
+  .bg-slantdark--top:before {
+    content: '';
+    position: absolute;
+    top: -85px;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background: url(../images/slant-black.png);
+    background-size: cover; }
 
 .signup-home {
   background: url(../images/mid_homepage.jpg) top center no-repeat fixed;
@@ -682,6 +712,22 @@ header.header-desktop.jsMinMenu {
     color: rgba(255, 255, 255, 0.4); }
   .bg-form small {
     display: block; }
+
+/*******ABOUT*******/
+.banner-about {
+  background: url(../images/bg-red.jpg);
+  position: relative; }
+  .banner-about:before {
+    content: ' ';
+    top: 0;
+    left: 0;
+    background: url(../images/gladiators-banner-right.png) right 100px fixed no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .banner-about h1 {
+    font-weight: 900;
+    position: relative; }
 
 /*******EVENTS*******/
 .bg-page {
