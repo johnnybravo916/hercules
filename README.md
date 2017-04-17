@@ -1,5 +1,6 @@
 # Hercules
 <h1>Olympiad UI</h1>
+<a href="https://app.box.com/s/8txaqlx9tmjzubv0b27h16edleusm8dc" title="Assets">Assets</a>
 <strong>Setup Instructions</strong>
 <ul>
   <li>Install Ruby</li>
