@@ -28,4 +28,8 @@ if ($( ".slider-carousel" ).length > 0) {
         $('.slider-carousel .flexslider').removeClass('js-preloader');
       }
   });
-}     
+}   
+//FANCYBOX 
+if ($('.fancybox').length > 0){
+  $('.fancybox').fancybox({});
+}

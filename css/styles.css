@@ -1,5 +1,6 @@
 @import url(bootstrap.min.css);
 @import url(flexslider.css);
+@import url(fancybox.css);
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 /*******GLOBAL*******/
 html {
@@ -75,8 +76,14 @@ a {
 .padding-150 {
   padding: 150px 0; }
 
+.padding-150-100 {
+  padding: 150px 0 100px; }
+
 .padding-200 {
   padding: 200px 0; }
+
+.status-green {
+  color: #2c9d21; }
 
 .breadcrumbs {
   font-size: 13px;
@@ -208,6 +215,26 @@ a {
   padding: 15px 0;
   background: #3b5998;
   display: block; }
+
+.button-buy {
+  text-align: center;
+  border: 1px solid #158e31;
+  background-color: #005826;
+  color: #ffffff;
+  width: 45%;
+  float: left; }
+  .button-buy:hover {
+    opacity: 0.8; }
+
+.button-sell {
+  text-align: center;
+  border: 1px solid #dd8626;
+  background-color: #a5481c;
+  color: #ffffff;
+  width: 45%;
+  float: right; }
+  .button-sell:hover {
+    opacity: 0.8; }
 
 .link-arrow {
   color: #f8a325;
@@ -743,6 +770,113 @@ header.header-desktop.jsMinMenu .wrap-login {
     text-transform: uppercase;
     font-weight: 900; }
 
+/*******EVENT SINGLE*******/
+.event-header {
+  text-align: right; }
+  .event-header .event-header--status {
+    margin-bottom: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  .event-header strong {
+    font-weight: 700; }
+  .event-header .event-header--dateLine {
+    margin-left: 20px;
+    display: inline;
+    text-transform: uppercase; }
+    .event-header .event-header--dateLine span {
+      color: #8c8c8c; }
+
+.event-overview {
+  margin-bottom: 30px; }
+  .event-overview .event-overview--image {
+    background-image: url(../images/gates_of_athens.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%; }
+  .event-overview .event-tag {
+    position: absolute;
+    padding: 10px;
+    background: #7f1d1a;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    left: 30px;
+    top: 15px; }
+
+.event-overview--data {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px; }
+  .event-overview--data h2 {
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase; }
+  .event-overview--data .event-overview--details {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px; }
+  .event-overview--data .event-overview--detailHeader {
+    text-transform: uppercase;
+    float: left;
+    letter-spacing: 1.5px; }
+  .event-overview--data .event-overview--detailContent {
+    float: right; }
+  .event-overview--data .event-overview--detailsBlock {
+    margin-bottom: 10px; }
+  .event-overview--data .event-overview--included {
+    margin-bottom: 30px; }
+    .event-overview--data .event-overview--included strong {
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 10px; }
+    .event-overview--data .event-overview--included ul {
+      margin: 0;
+      padding: 0 0 0 15px; }
+
+.events-players {
+  margin-bottom: 50px; }
+  .events-players h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px; }
+    .events-players h3 span {
+      font-weight: 700;
+      color: #a5481c; }
+
+.player-block {
+  background: #1d1d1d;
+  border: 1px solid #2d2d2d;
+  height: 70px;
+  margin-bottom: 30px; }
+  .player-block .player--rank {
+    font-size: 36px;
+    font-weight: 300;
+    float: left;
+    padding: 0 15px;
+    line-height: 70px;
+    opacity: 0.5; }
+  .player-block .player--image {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    float: left; }
+  .player-block .player--data {
+    float: left;
+    padding: 0 15px; }
+    .player-block .player--data .player--center {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 70px; }
+    .player-block .player--data .player--name {
+      color: #f8a325;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      display: block; }
+    .player-block .player--data .player--stock {
+      color: rgba(255, 255, 255, 0.4); }
+
 /*******NEWS*******/
 .bg-news {
   padding: 150px 0 100px; }
@@ -757,25 +891,35 @@ header.header-desktop.jsMinMenu .wrap-login {
   font-size: 13px; }
 
 .news-main {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  color: #ffffff; }
   .news-main .news-content {
     padding-top: 30px;
     padding-bottom: 30px; }
   .news-main h2 {
     margin-bottom: 25px;
-    font-weight: 900; }
+    font-weight: 900;
+    color: #ffffff; }
+    .news-main h2 a {
+      color: #ffffff; }
+      .news-main h2 a:hover {
+        color: #7f1d1a; }
   .news-main p {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 20px; }
 
 .news-block {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  color: #ffffff; }
   .news-block .border-news--data {
     padding: 20px; }
     .news-block .border-news--data h2 {
       font-size: 28px;
       margin-bottom: 20px;
-      font-weight: 900; }
+      font-weight: 900;
+      color: #ffffff; }
+  .news-block:hover {
+    background-color: #7f1d1a; }
 
 /*******FOOTER*******/
 footer.footer-main, footer.footer-form {
@@ -865,6 +1009,10 @@ footer.footer-form {
   border: none;
   border-radius: 0;
   box-shadow: none; }
+
+/*******FANCYBOX*******/
+.fancybox-content {
+  display: none; }
 
 /*******OVERRIDE*******/
 .margin-remove {

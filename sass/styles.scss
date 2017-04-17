@@ -1,5 +1,6 @@
 @import "bootstrap.min.css";
 @import "flexslider.css";
+@import "fancybox.css"; 
 @import "_partials/mixins";
 @import "_partials/variables";
 @import "_partials/typography";
@@ -29,7 +30,10 @@ a{
 .padding-50{padding:50px 0}
 .padding-100{padding:100px 0}
 .padding-150{padding:150px 0}
+.padding-150-100{padding:150px 0 100px}
 .padding-200{padding:200px 0}
+
+.status-green{color:#2c9d21}
 
 .breadcrumbs{
   font-size:$fontSmall;text-transform:uppercase;background:#541613;padding-left:20px;padding-right:20px;
@@ -79,7 +83,14 @@ a{
 .button-facebook{
   width:100%;color:$white;font-size:$fontdefault + 2;text-align:center;padding:15px 0;background:#3b5998;display:block;
 }
-
+.button-buy{
+  text-align:center;border:1px solid #158e31;background-color:#005826;color:$white;width:45%;float:left;
+  &:hover{opacity:0.8}
+}
+.button-sell{
+  text-align:center;border:1px solid #dd8626;background-color:#a5481c;color:$white;width:45%;float:right;
+  &:hover{opacity:0.8}
+}
 .link-arrow{
   color:$yellow;text-transform:uppercase;font-size:$fontSmall;position:relative;padding:10px 35px 10px 0;display:inline-block;@include transition(all ease-in-out 500ms);
   &:after{content:'';background:url(../images/link_arrow.png) right top no-repeat;height:25px;width:25px;display:inline-block;top:5px;right:0;position:absolute;@include transition(all ease-in-out 500ms)}
@@ -279,6 +290,56 @@ header.header-desktop.jsMinMenu .wrap-login{
   padding:200px 0 100px;
   h1{text-transform:uppercase;font-weight:$weightBlack}
 }
+/*******EVENT SINGLE*******/
+
+.event-header{
+  text-align:right;
+  .event-header--status{margin-bottom:15px;font-size:$fontMedium + 2;letter-spacing:1px;text-transform:uppercase;;}
+  strong{font-weight:$weightBold}
+  .event-header--dateLine{
+    margin-left:20px;display:inline;text-transform:uppercase;
+    span{color:#8c8c8c}
+  }
+}
+
+.event-overview{
+  margin-bottom:30px;
+  .event-overview--image{background-image:url(../images/gates_of_athens.jpg);background-size:cover;height:500px;width:100%}
+  .event-tag{position:absolute;padding:10px;background:$maroon;color:$white;text-transform:uppercase;font-size:$fontSmall;left:30px;top:15px}
+}
+.event-overview--data{
+  padding-top:30px;padding-bottom:30px;padding-right:30px;
+  h2{font-weight:$weightBlack;margin-bottom:25px;text-transform:uppercase}
+  .event-overview--details{color:rgba($white,0.7);margin-bottom:30px;}
+  .event-overview--detailHeader{text-transform:uppercase;float:left;letter-spacing:1.5px}
+  .event-overview--detailContent{float:right}
+  .event-overview--detailsBlock{margin-bottom:10px}
+  .event-overview--included{
+    margin-bottom:30px;
+    strong{text-transform:uppercase;display:block;margin-bottom:10px}
+    ul{margin:0;padding:0 0 0 15px}
+  } 
+}
+
+.events-players{
+  margin-bottom:50px;
+  h3{
+    font-weight:$weightBlack;text-transform:uppercase;letter-spacing:1px;margin-bottom:30px;
+    span{font-weight:$weightBold;color:#a5481c}
+  }
+}
+.player-block{
+  background:$darklight;border:1px solid $darkborder;height:70px;margin-bottom:30px;
+  .player--rank{font-size:$fontXL + 2;font-weight:$weightLight;float:left;padding:0 15px;line-height:70px;opacity:$opacityhalf}
+  .player--image{width:70px;height:70px;overflow:hidden;float:left}
+  .player--data{
+    float:left;padding:0 15px;
+    .player--center{display:flex;justify-content:center;flex-direction:column;height:70px}
+    .player--name{color:$yellow;text-transform:uppercase;margin-bottom:5px;display:block}
+    .player--stock{color:rgba($white,0.4);}
+  }
+}
+
 /*******NEWS*******/
 .bg-news{padding:150px 0 100px}
 
@@ -287,18 +348,25 @@ header.header-desktop.jsMinMenu .wrap-login{
 .news-date{color:#8c8c8c;margin-bottom:20px;font-size:$fontSmall}
 
 .news-main{
-  margin-bottom:30px;
+  margin-bottom:30px;color:$white;
   .news-content{padding-top:30px;padding-bottom:30px}
-  h2{margin-bottom:25px;font-weight:$weightBlack}
+  h2{
+    margin-bottom:25px;font-weight:$weightBlack;color:$white;
+    a{
+      color:$white;
+      &:hover{color:$maroon}
+    }
+  }
   p{color:rgba($white,0.7);margin-bottom:20px}
 }
 
 .news-block{
-  margin-bottom:30px;
+  margin-bottom:30px;color:$white;
   .border-news--data{
     padding:20px;
-    h2{font-size:$fontL;margin-bottom:20px;font-weight:$weightBlack}
+    h2{font-size:$fontL;margin-bottom:20px;font-weight:$weightBlack;color:$white;}
   }
+  &:hover{background-color:$maroon}
 }
 /*******FOOTER*******/
 footer.footer-main, footer.footer-form{
@@ -336,6 +404,9 @@ footer.footer-form{background:transparent}
 /*******FLEXSLIDER**************/
 .flexslider{margin:0 0 0 0;background:none;border:none;border-radius:0;box-shadow:none}  
    
+/*******FANCYBOX*******/
+.fancybox-content{display:none;}
+
 /*******OVERRIDE*******/
 .margin-remove{margin:0 0 0 0}
 /*******RESPONSIVE*******/
