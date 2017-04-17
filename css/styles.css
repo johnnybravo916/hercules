@@ -257,6 +257,9 @@ a.link-orange {
   a.link-orange:hover {
     color: #ae7658; }
 
+link-readmore {
+  text-transform: uppercase; }
+
 .event-block {
   margin-bottom: 30px;
   display: block;
@@ -739,6 +742,40 @@ header.header-desktop.jsMinMenu .wrap-login {
   .banner-page h1 {
     text-transform: uppercase;
     font-weight: 900; }
+
+/*******NEWS*******/
+.bg-news {
+  padding: 150px 0 100px; }
+
+.border-news {
+  background: #1d1d1d;
+  border: 1px solid #2d2d2d; }
+
+.news-date {
+  color: #8c8c8c;
+  margin-bottom: 20px;
+  font-size: 13px; }
+
+.news-main {
+  margin-bottom: 30px; }
+  .news-main .news-content {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .news-main h2 {
+    margin-bottom: 25px;
+    font-weight: 900; }
+  .news-main p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px; }
+
+.news-block {
+  margin-bottom: 30px; }
+  .news-block .border-news--data {
+    padding: 20px; }
+    .news-block .border-news--data h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 900; }
 
 /*******FOOTER*******/
 footer.footer-main, footer.footer-form {

@@ -93,6 +93,7 @@ a.link-orange{
   color:$yellow;
   &:hover{color:$bronze}
 }
+link-readmore{text-transform:uppercase}
 .event-block{
   margin-bottom:30px;display:block;color:$white;
   &:hover{color:$white}
@@ -278,7 +279,27 @@ header.header-desktop.jsMinMenu .wrap-login{
   padding:200px 0 100px;
   h1{text-transform:uppercase;font-weight:$weightBlack}
 }
+/*******NEWS*******/
+.bg-news{padding:150px 0 100px}
 
+.border-news{background:$darklight;border:1px solid $darkborder;}
+
+.news-date{color:#8c8c8c;margin-bottom:20px;font-size:$fontSmall}
+
+.news-main{
+  margin-bottom:30px;
+  .news-content{padding-top:30px;padding-bottom:30px}
+  h2{margin-bottom:25px;font-weight:$weightBlack}
+  p{color:rgba($white,0.7);margin-bottom:20px}
+}
+
+.news-block{
+  margin-bottom:30px;
+  .border-news--data{
+    padding:20px;
+    h2{font-size:$fontL;margin-bottom:20px;font-weight:$weightBlack}
+  }
+}
 /*******FOOTER*******/
 footer.footer-main, footer.footer-form{
   background:$dark;border:1px solid $darkborder;border-width:1px 0;padding:20px 0;
